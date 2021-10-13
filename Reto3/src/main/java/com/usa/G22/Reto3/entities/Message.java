@@ -31,14 +31,14 @@ public class Message implements Serializable{
     //@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "skateId")
-    @JsonIgnoreProperties({"messages"})
+    @JsonIgnoreProperties({"messages","reservations"})
     private Skate skate;
     
     //Relacion con client
     //@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "clientId")
-    @JsonIgnoreProperties(value="messages")
+    @JsonIgnoreProperties({"messages","reservations"})
     private Client client;
     
     
