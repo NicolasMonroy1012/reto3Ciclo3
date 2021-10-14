@@ -23,13 +23,13 @@ public class SkateController {
     private SkateService skateboardService;
     
     @GetMapping("/all")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public List<Skate> getSkates(){
         return skateboardService.getAll();
     }
     
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public Optional<Skate> getSkate(@PathVariable("id") int skateboardId){
         return skateboardService.getSkateboard(skateboardId);
     }
@@ -43,13 +43,13 @@ public class SkateController {
 
 
     @PutMapping("/update")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public Skate update(@RequestBody Skate skateboard){
         return skateboardService.update(skateboard);
     }
     
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public boolean delete(@PathVariable("id") int carId){
         return skateboardService.deleteSkateboard(carId);
     }

@@ -23,13 +23,13 @@ public class ClientController {
     private ClientService clientService;
     
     @GetMapping("/all")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public List<Client> getClients(){
         return clientService.getAll();
     }
     
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public Optional<Client> getClient(@PathVariable("id") int clientId){
         return clientService.getClient(clientId);
     }
@@ -42,13 +42,13 @@ public class ClientController {
 
 
     @PutMapping("/update")
-    @ResponseStatus(HttpStatus.CREATED)
+
     public Client update(@RequestBody Client client){
         return clientService.update(client);
     }
     
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.CREATED)
+   
     public boolean delete(@PathVariable("id") int carId){
         return clientService.deleteClient(carId);
     }
