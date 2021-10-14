@@ -17,7 +17,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "reservation")
-@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Reservation implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

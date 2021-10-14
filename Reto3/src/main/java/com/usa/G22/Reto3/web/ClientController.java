@@ -23,13 +23,11 @@ public class ClientController {
     private ClientService clientService;
     
     @GetMapping("/all")
-
     public List<Client> getClients(){
         return clientService.getAll();
     }
     
     @GetMapping("/{id}")
-
     public Optional<Client> getClient(@PathVariable("id") int clientId){
         return clientService.getClient(clientId);
     }
@@ -42,13 +40,11 @@ public class ClientController {
 
 
     @PutMapping("/update")
-
     public Client update(@RequestBody Client client){
         return clientService.update(client);
     }
     
     @DeleteMapping("/{id}")
-   
     public boolean delete(@PathVariable("id") int carId){
         return clientService.deleteClient(carId);
     }
