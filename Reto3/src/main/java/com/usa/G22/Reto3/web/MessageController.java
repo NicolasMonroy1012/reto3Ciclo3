@@ -22,28 +22,32 @@ public class MessageController {
     private MessageService messageService;
     
     @GetMapping("/all")
+    @ResponseStatus(HttpStatus.CREATED)
     public List<Message> getMessages(){
         return messageService.getAll();
     }
     
     @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
     public Optional<Message> getMessage(@PathVariable("id") int messageId){
         return messageService.getMessage(messageId);
     }
     
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message save(@RequestBody Message message){
         return messageService.save(message);
     }
-    @ResponseStatus(HttpStatus.CREATED)
 
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message update(@RequestBody Message message){
         return messageService.update(message);
     }
     
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
     public boolean delete(@PathVariable("id") int carId){
         return messageService.deleteCategory(carId);
     }
