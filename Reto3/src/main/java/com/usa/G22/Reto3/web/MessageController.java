@@ -41,12 +41,13 @@ public class MessageController {
 
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message update(@RequestBody Message message){
         return messageService.update(message);
     }
     
     @DeleteMapping("/{id}")
-
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int carId){
         return messageService.deleteCategory(carId);
     }

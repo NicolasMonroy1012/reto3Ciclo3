@@ -12,10 +12,6 @@ import com.usa.G22.Reto3.entities.Skate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author cktv
- */
 @Repository
 public class SkateRepository {
     @Autowired

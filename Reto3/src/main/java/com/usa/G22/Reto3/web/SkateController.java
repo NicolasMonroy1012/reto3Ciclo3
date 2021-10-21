@@ -43,13 +43,13 @@ public class SkateController {
 
 
     @PutMapping("/update")
-
+    @ResponseStatus(value= HttpStatus.CREATED)
     public Skate update(@RequestBody Skate skateboard){
         return skateboardService.update(skateboard);
     }
     
     @DeleteMapping("/{id}")
-
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int carId){
         return skateboardService.deleteSkateboard(carId);
     }

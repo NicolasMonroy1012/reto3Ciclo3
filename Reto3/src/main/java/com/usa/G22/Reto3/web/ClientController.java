@@ -40,11 +40,13 @@ public class ClientController {
 
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Client update(@RequestBody Client client){
         return clientService.update(client);
     }
     
     @DeleteMapping("/{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int carId){
         return clientService.deleteClient(carId);
     }
