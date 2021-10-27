@@ -21,9 +21,9 @@ public class Reservation implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idReservation;
-    private Calendar startDate;
-    private Calendar devolutionDate;
-    private String status="created";
+    private Date startDate;
+    private Date devolutionDate;
+    private String status;
     
     @ManyToOne
     @JoinColumn(name = "skateId")
@@ -42,7 +42,7 @@ public class Reservation implements Serializable{
     public Reservation() {
     }
 
-    public Reservation(Integer idReservation, Calendar startDate, Calendar devolutionDate, String status, Skate skate, Client client, Score score) {
+    public Reservation(Integer idReservation, Date startDate, Date devolutionDate, String status, Skate skate, Client client, Score score) {
         this.idReservation = idReservation;
         this.startDate = startDate;
         this.devolutionDate = devolutionDate;
@@ -60,19 +60,19 @@ public class Reservation implements Serializable{
         this.idReservation = idReservation;
     }
 
-    public Calendar getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Calendar startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public Calendar getDevolutionDate() {
+    public Date getDevolutionDate() {
         return devolutionDate;
     }
 
-    public void setDevolutionDate(Calendar devolutionDate) {
+    public void setDevolutionDate(Date devolutionDate) {
         this.devolutionDate = devolutionDate;
     }
 
