@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Spartan:wght@100&family=Varela+Round&display=swap');
+
+/*BASE*/
+
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Spartan', sans-serif;
+}
+
+
+/*Barra Navegación*/
+
+nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav .menu {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+.unauthenticated,
+.authenticated{
+    color: #fff;
+}
+.btSign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #610094;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+.btSign:hover{
+    background: #3F0071;
+}
+.btSign:active {
+    background: #150050;
+}
+.icon-span,
+.text-span{
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 15px;
+    color: white;
+    height: 100%;
+}
+.text-span{
+    font-weight: bold;
+}
+.icon-span{
+    font-size: 32px;
+}
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.form_title {
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+}
+
+.skate_table {
+    font-family: 'Spartan', sans-serif;
+    color: #fff;
+}
+
+.btModel {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background-color: #610094;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Spartan', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btModel:hover {
+    background: #3F0071;
+}
+
+.btModel:active {
+    background: #150050;
+}
+
+.button__text,
+.button__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    height: 100%;
+}
+
+.button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.custom_field {
+    position: relative;
+    font-size: 14px;
+    font-family: 'Spartan', sans-serif;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom_field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(199, 199, 199);
+    padding: 12px;
+    border-radius: 3.5px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+}
+
+.custom_field .placeholder {
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: rgb(170, 170, 170);
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.custom_field input:valid+.placeholder,
+.custom_field input:focus+.placeholder {
+    top: -5px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.table_model {
+    border-collapse: collapse;
+    margin: 25 px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    font-family: 'Spartan', sans-serif;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.table_model thead tr {
+    background-color: #610094;
+    text-align: left;
+    font-family: 'Spartan', sans-serif;
+    color: #fff;
+}
+
+.table_model tbody tr {
+    color: #fff;
+    border-bottom: 2px solid #3F0071;
+}
+
+.table_model th,
+.table_model td {
+    padding: 12px 15px;
+}
+
+.table_model tbody tr:last-of-type {
+    border-bottom: 3px solid #610094;
+}

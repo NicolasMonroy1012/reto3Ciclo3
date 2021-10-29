@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="X-UA-Compatible" content="IE=edge" />
+    <title>Skater's Lair | Skate</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="index.html">Skater's Lair</a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="cool-link">inicio</a></li>
+                <li><a href="skate.html" class="cool-link">skate</a></li>
+                <li><a href="cliente.html" class="cool-link">clientes</a></li>
+                <li><a href="#" class="cool-link">mensajes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="form_title">Tabla de Clientes</h1>
+    <div>
+        <br />
+        <label class="custom_field">
+            <input type="number" id="id" required/>
+            <span class="placeholder">Ingrese el id</span>
+        </label><br /><br /><br />
+        <label class="custom_field">
+            <input type="text" id="name" required/>
+            <span class="placeholder">Ingrese el Nombre</span>
+        </label><br /><br /><br />
+        <label class="custom_field">
+            <input type="text" id="email" required/>
+            <span class="placeholder">Ingrese el email</span>
+        </label><br /><br /><br />
+        <label class="custom_field">
+            <input type="number" id="age" required/>
+            <span class="placeholder">Ingrese la edad</span>
+        </label><br /><br /><br />
+    </div>
+    <br />
+    <div class="btContainer">
+        <button type="button" class="btModel" onclick="traerInfoCliente()">
+        <span class="button__text">Consulta</span>
+        <span class="button__icon">
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </span>
+      </button>
+        <button type="button" class="btModel" onclick="guardarInfoCliente()">
+        <span class="button__text">Guardar</span>
+        <span class="button__icon">
+          <ion-icon name="save-outline"></ion-icon>
+        </span>
+      </button>
+        <td><button type='button' class='btModel' onclick='editarInfoCliente()'>
+            <span class="button__text">Editar</span>
+            <span class='button__icon'>
+                <ion-icon name='create-outline'></ion-icon>
+            </span>
+        </button>
+    </div>
+    <br />
+    <br />
+    <table class="table_model">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>E-mail</th>
+                <th>Edad</th>
+                <th>Herramientas </th>
+            </tr>
+        </thead>
+        <tbody id="table_model">
+        </tbody>
+    </table>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
